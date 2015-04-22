@@ -3,12 +3,12 @@
 <% end %>
 
 <% if (user_signed_in?) && (current_user.surveys.count == 0) %>
-<%= link_to "Take Survey", new_survey_path, class:"btn btn-primary "%>
+<%= link_to "Take Evaluation", new_survey_path, class:"btn btn-primary "%>
 <% else %>
 <% if (user_signed_in?) %>
 <% current_user.surveys.each do |survey|%>
- <%= link_to "View Survey", survey_path(survey), class:"btn btn-primary "%>
-<%= link_to "Edit Survey", edit_survey_path(survey), class:"btn btn-success "%>
+ <%= link_to "View Evaluation", survey_path(survey), class:"btn btn-primary "%>
+<%= link_to "Edit Evaluation", edit_survey_path(survey), class:"btn btn-success "%>
 
     <% end %>
 <% end %>
@@ -25,9 +25,9 @@
 
           <h1>Welcome <%=current_user.name %></h1>
 <p>Your Department: <%=current_user.department %></p>
-<p>Your Rank <%=current_user.department %></p>
-<p>Your Status<%=current_user.department %></p>
-<p>Your Contract expiration date<%=current_user.department %></p>
+<p>Your Rank: <%=current_user.rank %></p>
+<p>Your Status: <%=current_user.status %></p>
+<p>Your Contract Expiration Date: <%=current_user.contract%></p>
 
 <% else %>
 <h1>Please log in to continue</h1>
