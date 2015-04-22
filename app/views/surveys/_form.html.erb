@@ -1,0 +1,170 @@
+<%= form_for(@survey) do |f| %>
+  <% if @survey.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@survey.errors.count, "error") %> prohibited this survey from being saved:</h2>
+
+      <ul>
+      <% @survey.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+<h2>Research and Other Scholarly Achievements </h2>
+  <div class="field">
+    <%= f.label "Published Refereed Journal Aticles" %><br>
+    <%= f.text_area :q1 %>
+  </div>
+  <div class="field">
+    <%= f.label "Accepted (Non-published) Refereed Journal Articles"%><br>
+    <%= f.text_area :q2 %>
+  </div>
+  <div class="field">
+    <%= f.label "Articles Submitted For Publication to Refereed Journals" %><br>
+    <%= f.text_area :q3 %>
+  </div>
+  <div class="field">
+    <%= f.label "Proceedings (publication of a case or paper in a peer-reviewed proceeding)" %><br>
+    <%= f.text_area :q4 %>
+  </div>
+  <div class="field">
+    <%= f.label "Presentations"%><br>
+    <%= f.text_area :q5 %>
+  </div>
+  <div class="field">
+    <%= f.label "Other Intellectual Contributions" %><br>
+    <%= f.text_area :q6 %>
+  </div>
+  <div class="field">
+    <%= f.label "Funded Grant Proposals" %><br>
+    <%= f.text_area :q7 %>
+  </div>
+  <div class="field">
+    <%= f.label "Submitted Grant Proposals" %><br>
+    <%= f.text_area :q8 %>
+  </div>
+  <div class="field">
+    <%= f.label "Teaching" %><br>
+    <%= f.text_area :q9 %>
+  </div>
+  <div class="field">
+    <%= f.label "Achievements Related to Teaching" %><br>
+    <%= f.text_area :q10 %>
+    <%= f.file_field :q10_file %>
+  </div>
+
+
+<h2>Course load and student feedback </h2>
+<h3>Fall 2014</h3>
+<table class="table table-bordered">
+  <tr>
+    <td><strong>Course Title</strong></td>
+    <td><strong>CRN</strong></td>
+    <td><strong>No. of Students</strong></td>
+  </tr>
+  
+  <tr>
+    <td><%= f.text_field :ct1 %></td>
+    <td><%= f.text_field :crn1 %></td>
+    <td><%= f.text_field :no1 %></td>
+  </tr>
+  
+  <tr>
+    <td><%= f.text_field :ct2 %></td>
+    <td><%= f.text_field :crn2 %></td>
+    <td><%= f.text_field :no2 %></td>
+  </tr>
+  
+  <tr>
+    <td><%= f.text_field :ct3 %></td>
+    <td><%= f.text_field :crn3 %></td>
+    <td><%= f.text_field :no3 %></td>
+  </tr>
+  
+   <tr>
+    <td><%= f.text_field :ct4 %></td>
+    <td><%= f.text_field :crn4 %></td>
+    <td><%= f.text_field :no4 %></td>
+  </tr>
+</table>
+
+<h3>Spring 2015</h3>
+<table class="table table-bordered">
+  <tr>
+    <td><strong>Course Title</strong></td>
+    <td><strong>CRN</strong></td>
+    <td><strong>No. of Students</strong></td>
+  </tr>
+  
+  <tr>
+    <td><%= f.text_field :ct5 %></td>
+    <td><%= f.text_field :crn5 %></td>
+    <td><%= f.text_field :no5 %></td>
+  </tr>
+  
+  <tr>
+    <td><%= f.text_field :ct6 %></td>
+    <td><%= f.text_field :crn6 %></td>
+    <td><%= f.text_field :no6 %></td>
+  </tr>
+  
+  <tr>
+    <td><%= f.text_field :ct7 %></td>
+    <td><%= f.text_field :crn7 %></td>
+    <td><%= f.text_field :no7 %></td>
+  </tr>
+  
+   <tr>
+    <td><%= f.text_field :ct8 %></td>
+    <td><%= f.text_field :crn8 %></td>
+    <td><%= f.text_field :no8 %></td>
+  </tr>
+</table>
+
+
+
+  <div class="field">
+    <%= f.label "Service to the University" %><br>
+    <%= f.text_area :q11 %>
+  </div>
+  <div class="field">
+    <%= f.label "Service to the School" %><br>
+    <%= f.text_area :q12 %>
+  </div>
+  <div class="field">
+    <%= f.label "Service to the Department"  %><br>
+    <%= f.text_area :q13 %>
+  </div>
+  <div class="field">
+    <%= f.label "Service to the Community"  %><br>
+    <%= f.text_area :q14 %>
+  </div>
+<h2>Profesional Development</h2>
+  <div class="field">
+    <%= f.label "Conference Participation" %><br>
+    <%= f.text_area :q15 %>
+  </div>
+  <div class="field">
+    <%= f.label "Seminar, Workshop, Session, and Panel Participation" %><br>
+    <%= f.text_area :q16 %>
+  </div>
+  <div class="field">
+    <%= f.label "Courses of Degree Programs Completed/Proffesional Certifications Obtained or Maintained" %><br>
+    <%= f.text_area :q17 %>
+  </div>
+  <div class="field">
+    <%= f.label "Other" %><br>
+    <%= f.text_area :q18 %>
+  </div>
+  <div class="field">
+    <%= f.label "Awards and Honors" %><br>
+    <%= f.text_area :q19 %>
+  </div>
+  <div class="field">
+    <%= f.label "Faculty Member Comments" %><br>
+    <%= f.text_area :q20 %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

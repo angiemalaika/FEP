@@ -1,0 +1,15 @@
+<h1>Listing surveys</h1>
+
+
+
+    <% @surveys.each do |survey| %>
+
+<h4><%= link_to 'View Survey', survey %></h4> 
+      
+    <% end %>
+  
+
+
+<br>
+
+<%= link_to 'New Survey', new_survey_path %>

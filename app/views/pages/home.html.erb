@@ -1,0 +1,35 @@
+<% if (user_signed_in?) && (current_user.admin == true) %>
+<%= link_to "View All", surveys_path, class:"btn btn-primary "%>
+<% end %>
+
+<% if (user_signed_in?) && (current_user.surveys.count == 0) %>
+<%= link_to "Take Survey", new_survey_path, class:"btn btn-primary "%>
+<% else %>
+<% if (user_signed_in?) %>
+<% current_user.surveys.each do |survey|%>
+ <%= link_to "View Survey", survey_path(survey), class:"btn btn-primary "%>
+<%= link_to "Edit Survey", edit_survey_path(survey), class:"btn btn-success "%>
+
+    <% end %>
+<% end %>
+<%end%>
+              <% if user_signed_in? %> 
+
+                  <%= link_to "Logout",destroy_user_session_path, method: :delete,  class:"btn btn-danger"  %>
+<%= link_to "Edit", edit_user_registration_path,  class:"btn btn-primary"  %>
+                <% else %>
+                  <%= link_to "Login", new_user_session_path,  class:"btn btn-success"  %>
+                <% end %>  
+
+  <% if user_signed_in? %> 
+
+          <h1>Welcome <%=current_user.name %></h1>
+<p>Your Department: <%=current_user.department %></p>
+<p>Your Rank <%=current_user.department %></p>
+<p>Your Status<%=current_user.department %></p>
+<p>Your Contract expiration date<%=current_user.department %></p>
+
+<% else %>
+<h1>Please log in to continue</h1>
+
+                <% end %> 

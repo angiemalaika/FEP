@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  published_articles: MyString
+  accepted_articles: MyString
+  submitted_articles: MyString
+  proceedings: MyString
+  presentations: MyString
+  other: MyString
+  funded_proposals: MyString
+  submitted_proposals: MyString
+  teaching: MyString
+  teaching_achievements: MyString
+
+two:
+  published_articles: MyString
+  accepted_articles: MyString
+  submitted_articles: MyString
+  proceedings: MyString
+  presentations: MyString
+  other: MyString
+  funded_proposals: MyString
+  submitted_proposals: MyString
+  teaching: MyString
+  teaching_achievements: MyString
