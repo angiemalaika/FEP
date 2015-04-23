@@ -41,7 +41,7 @@ respond_to :html
     end
 
     def survey_params
-      params.require(:survey).permit(:q1, :q1_file, :q2, :q2_file, :q3, :q3_file, :q4, :q4_file, :q5, :q5_file, :q6, :q6_file, :q7, :q7_file, :q8, :q8_file, :q9, :q9_file, :q10, :q10_file, :q11, :q11_file, :q12, :q12_file, :q13, :q13_file, :q14, :q14_file, :q15, :q15_file, :q16, :q16_file, :q17, :q17_file, :q18, :q18_file, :q19, :q19_file, :q20, :q20_file)
+      params.require(:survey).permit(:q1, :q1_file, :q2, :q2_file, :q3, :q3_file, :q4, :q4_file, :q5, :q5_file, :q6, :q6_file, :q7, :q7_file, :q8, :q8_file, :q9, :q9_file, :q10, :q10_file, :q11, :q11_file, :q12, :q12_file, :q13, :q13_file, :q14, :q14_file, :q15, :q15_file, :q16, :q16_file, :q17, :q17_file, :q18, :q18_file, :q19, :q19_file, :q20, :q20_file, :ct1, :ct2, :ct3, :ct4, :ct5, :ct6, :ct7, :ct8, :crn1, :crn2, :crn3, :crn4, :crn5, :crn6, :crn7, :crn8, :no1, :no2, :no3, :no4, :no5, :no6, :no7, :no8, )
     end
   def check_user
     if current_user.admin != true
